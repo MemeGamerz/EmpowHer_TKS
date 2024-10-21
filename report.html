@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowHer - Report Harassment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="report.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a class="navbar-brand" href="index.html">EmpowHer</a>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="index.html#about">About Us</a></li>
+            <li><a class="nav-link" href="index.html#workplace-rights">Workplace Equality</a></li>
+            <li><a class="nav-link" href="index.html#public-safety">Safety</a></li>
+            <li><a class="nav-link" href="index.html#policy-legal">Legal & Advocacy</a></li>
+            <li><a class="nav-link" href="index.html#resources">Resources & Stories</a></li>
+            <li><a class="nav-link" href="index.html#get-help">Support Services</a></li>
+            <li><a class="nav-link" href="index.html#get-involved">Take Action</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="report-harassment" class="section">
+            <div class="container">
+                <h2>Report Harassment</h2>
+                <p>We are committed to creating a safe space for everyone. If you have experienced harassment, please
+                    use this form to report it. Your report will be kept confidential and handled with sensitivity.</p>
+
+                <form id="report-form">
+                    <div class="form-step" id="step-1">
+                        <h3>Step 1: Incident Details</h3>
+                        <label for="incident-type">Type of Harassment:</label>
+                        <select id="incident-type" name="incident-type">
+                            <option value="">Select Type</option>
+                            <option value="verbal">Verbal Harassment</option>
+                            <option value="physical">Physical Harassment</option>
+                            <option value="visual">Visual Harassment</option>
+                            <option value="cyberbullying">Cyberbullying</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label for="incident-date">Date of Incident:</label>
+                        <input type="date" id="incident-date" name="incident-date">
+
+                        <label for="incident-location">Location of Incident:</label>
+                        <input type="text" id="incident-location" name="incident-location"
+                            placeholder="E.g., Workplace, Online, Public Space">
+
+                        <label for="incident-description">Description:</label>
+                        <textarea id="incident-description" name="incident-description" rows="5"
+                            placeholder="Please provide a detailed description of the incident."></textarea>
+
+                        <button type="button" onclick="nextStep(2)">Next</button>
+                    </div>
+
+                    <div class="form-step" id="step-2" style="display:none;">
+                        <h3>Step 2: Your Information (Optional)</h3>
+                        <p>Providing your contact information helps us follow up if necessary, but it is not required.
+                        </p>
+                        <label for="your-name">Your Name:</label>
+                        <input type="text" id="your-name" name="your-name">
+
+                        <label for="your-email">Your Email:</label>
+                        <input type="email" id="your-email" name="your-email">
+
+                        <button type="button" onclick="prevStep(1)">Back</button>
+                        <button type="submit">Submit Report</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>EmpowHer</h4>
+                    <p>Advocating for women's rights in the workplace and public spaces.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#workplace-rights">Workplace Rights</a></li>
+                        <li><a href="index.html#public-safety">Public Safety</a></li>
+                        <li><a href="index.html#policy-legal">Policy & Legal</a></li>
+                        <li><a href="index.html#get-involved">Get Involved</a></li>
+                        <li><a class="nav-link" href="index.html#resources">Resources</a></li>
+                        <li><a href="index.html#get-help">Get Help</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <address>
+                        EmpowHer Headquarters<br>
+                        123 Main Street<br>
+                        City, State, ZIP
+                    </address>
+                    <p><strong>Email:</strong> <a href="mailto:info@EmpowHer.org">info@EmpowHer.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                    <ul class="social-links">
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <p>© 2024 EmpowHer. All rights reserved.</p>
+            </div>
+            <a href="#" class="back-to-top">Back to Top</a>
+    </footer>
+
+    <script>
+        function nextStep(stepNumber) {
+            document.getElementById(`step-${stepNumber - 1}`).style.display = 'none';
+            document.getElementById(`step-${stepNumber}`).style.display = 'block';
+        }
+
+        function prevStep(stepNumber) {
+            document.getElementById(`step-${stepNumber + 1}`).style.display = 'none';
+            document.getElementById(`step-${stepNumber}`).style.display = 'block';
+        }
+
+        const reportForm = document.getElementById('report-form');
+        reportForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            alert('Thank you for your report. We will reach out as soon as possible.');
+
+            setTimeout(function () {
+                window.location.href = 'index.html?reportSubmitted=true';
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
