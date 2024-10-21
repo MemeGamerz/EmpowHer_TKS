@@ -90,5 +90,30 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.has('reportSubmitted')) {
     alert("Thank you for your report. We will reach out as soon as possible.");
     window.location.href = 'index.html';
-    
+
 }
+
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const scrollPosition = window.pageYOffset;
+
+        if (scrollPosition >= sectionTop - sectionHeight / 3 &&
+            scrollPosition < sectionTop + sectionHeight) {
+
+            const sectionId = section.getAttribute('id');
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    });
+});

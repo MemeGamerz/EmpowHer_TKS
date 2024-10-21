@@ -39,6 +39,11 @@ nav:hover {
     background-color: rgba(56, 54, 54, 0.829);
 }
 
+.nav-link.active { 
+    color: var(--accent-color); 
+    font-weight: bold;
+}
+
 .navbar-brand {
     font-weight: 700;
     font-size: 1.8rem;
