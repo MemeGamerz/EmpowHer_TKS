@@ -15,6 +15,3 @@ To empower women through:
   3. Call to Action: Join our movement by volunteering, donating, or advocating for change.
 
 EmpowHer is more than just a website; it's a community. We've meticulously curated content, designed a user-friendly interface, and prioritised accessibility to ensure every woman feels empowered and supported.By addressing the specific challenges faced by women like our inspiration - Maya, EmpowHer provides a valuable platform for education, support, and collective action.
-
-
-@@@This is a TEST to see if this shit works or not (((((((((())))))))))
